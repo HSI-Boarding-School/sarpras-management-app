@@ -27,9 +27,9 @@ const commonRules = () => ({
   'consistent-return': 2,
   'no-constant-condition': 1,
   'no-unused-vars': [1, { args: 'none' }],
-  'default-case': [2, { commentPattern: '^no default$' }],
+  'default-case': [2, { commentPattern: '^no default' }],
   'lines-around-directive': [2, { before: 'always', after: 'always' }],
-  'arrow-body-style': [2, 'as-needed', { requireReturnForObjectLiteral: false }],
+  'arrow-body-style': [1, 'as-needed', { requireReturnForObjectLiteral: false }],
   // react
   'react/jsx-key': 0,
   'react/prop-types': 0,
@@ -59,6 +59,7 @@ const importRules = () => ({
     0, // disabled if slow
     { maxDepth: '∞', ignoreExternal: false, allowUnsafeDynamicCyclicDependency: false },
   ],
+  'import/no-unresolved': 0,
 });
 
 /**
@@ -101,7 +102,7 @@ const sortImportsRules = () => {
       },
     ],
     'perfectionist/sort-imports': [
-      2,
+      1,
       {
         order: 'asc',
         ignoreCase: true,
@@ -160,7 +161,7 @@ export const customConfig = {
     'import/resolver': {
       alias: {
         map: [['src', './src']],
-        extensions: ['.js', '.jsx', '.json'],
+        extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
       },
     },
   },

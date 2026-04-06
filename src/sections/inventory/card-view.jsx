@@ -147,7 +147,7 @@ export function InventoryCardView() {
         {/* Grid of Cards */}
         {paginatedItems.length > 0 ? (
           <>
-            <Grid container spacing={2} sx={{ mb: 4, mx: 'auto', width: '100%', justifyContent: 'center' }}>
+            <Grid container spacing={3} sx={{ mb: 4 }}>
               {paginatedItems.map((item) => (
                 <Grid item xs={12} sm={6} md={4} key={item.id}>
                   <Card
@@ -157,7 +157,6 @@ export function InventoryCardView() {
                       flexDirection: 'column',
                       cursor: 'pointer',
                       transition: 'all 0.3s ease',
-                      minWidth: '300px',
                       '&:hover': {
                         transform: 'translateY(-8px)',
                         boxShadow: 4,
