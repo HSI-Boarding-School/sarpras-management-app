@@ -176,8 +176,8 @@ export const customConfig = {
 // ----------------------------------------------------------------------
 
 export default [
-  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
-  { ignores: ['*', '!src/', '!eslint.config.*'] },
+  { ignores: ['**/*.ts', '**/*.tsx', 'node_modules/**', '.next/**', 'dist/**'] },
+  { files: ['**/*.{js,mjs,cjs,jsx}'] },
   {
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
